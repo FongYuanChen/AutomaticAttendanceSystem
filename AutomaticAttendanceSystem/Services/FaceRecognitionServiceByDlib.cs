@@ -65,7 +65,7 @@ namespace AutomaticAttendanceSystem.Services
         /// <returns>人臉特徵向量。</returns>
         private Matrix<float> GetFaceDescriptor(Employee employee)
         {
-            return _faceDescriptors.GetOrAdd($"{employee.Index}.{employee.Name}.{employee.Number}",
+            return _faceDescriptors.GetOrAdd($"{employee.Name}.{employee.Number}",
                                              (key) =>
                                              {
                                                  var photo = employee.Photo;

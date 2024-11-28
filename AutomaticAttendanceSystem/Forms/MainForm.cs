@@ -32,7 +32,10 @@ namespace AutomaticAttendanceSystem.Forms
 
             _employee.InfoUpdated += () =>
             {
-                ShowFormInPanel(mainPanel, _workHoursManagementForm);
+                if (_employee.InfoCompleteness)
+                {
+                    ShowFormInPanel(mainPanel, _workHoursManagementForm);
+                }
             };
         }
 

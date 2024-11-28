@@ -68,7 +68,7 @@ namespace AutomaticAttendanceSystem.Forms
         {
             if (MessageBoxForm.Show("確定要修改員工訊息?\n確定後會刪除當前打卡紀錄!", string.Empty, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                _employee.ClearInfo();
+                _employee.UpdateInfo(null, null, null, TimeSpan.Zero);
                 ShowModifyForm();
             }
         }

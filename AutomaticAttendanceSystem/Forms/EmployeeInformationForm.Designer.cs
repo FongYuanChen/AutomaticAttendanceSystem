@@ -156,6 +156,7 @@ namespace AutomaticAttendanceSystem.Forms
             cameraErrorPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             cameraErrorPictureBox.TabIndex = 8;
             cameraErrorPictureBox.TabStop = false;
+            cameraErrorPictureBox.Visible = false;
             // 
             // takeEmployeePhotoButton
             // 

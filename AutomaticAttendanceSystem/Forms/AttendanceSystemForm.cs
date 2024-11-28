@@ -102,7 +102,7 @@ namespace AutomaticAttendanceSystem.Forms
                 }
             }
 
-            if (_employee.IsWorking && _employee.GetAccumulatedWorkTime() >= _employee.DailyWorkHours)
+            if (_employee.IsWorking && _employee.AccumulatedWorkTime >= _employee.DailyWorkHours)
             {
                 _employee.StopWork();
                 MessageBoxForm.Show("以滿足今日工時，可以下班了!", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -122,7 +122,7 @@ namespace AutomaticAttendanceSystem.Forms
             var targetWorkHours = _employee.DailyWorkHours;
             targetTimeTextBox.Text = targetWorkHours.ToString(@"hh\:mm\:ss");
 
-            var accumulatedTime = _employee.GetAccumulatedWorkTime();
+            var accumulatedTime = _employee.AccumulatedWorkTime;
             accumulatedTimeTextBox.Text = accumulatedTime.ToString(@"hh\:mm\:ss");
 
             var remainingTime = targetWorkHours - accumulatedTime;
